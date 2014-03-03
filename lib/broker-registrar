@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+def usage
+  'Usage: --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
+end
+
+def parse_arguments
+  options = {}
+  option_parser = OptionParser.new do |opts|
+    opts.banner = usage
+
+    puts "HEY!"
+
+    opts.on("--cf-address URL", "Cloud Foundry URL") do |cf_url|
+      options[:cf_url] = cf_url
+    end
+    opts.on("--cf-username USERNAME", "Cloud Foundry username") do |cf_username|
+      options[:cf_username] = cf_username
+    end
+    opts.on("--cf-password PASSWORD", "Cloud Foundry password") do |cf_password|
+      options[:cf_password] = cf_password
+    end
+    opts.on("--broker-name BROKER_NAME", "Broker name") do |broker_name|
+      options[:broker_name] = broker_name
+    end
+    opts.on("--broker-url BROKER_URL", "Broker URL") do |broker_url|
+      options[:broker_url] = broker_url
+    end
+    opts.on("--broker-username BROKER_USERNAME", "Broker username") do |broker_username|
+      options[:broker_username] = broker_username
+    end
+    opts.on("--broker-password BROKER_PASSWORD", "Broker password") do |broker_password|
+      options[:broker_password] = broker_password
+    end
+  end
+
+  option_parser.parse!
+
+  raise OptionParser::MissingArgument if options[:cf_url].nil? ||
+    options[:cf_username].nil? ||
+    options[:cf_password].nil? ||
+    options[:broker_name].nil? ||
+    options[:broker_url].nil? ||
+    options[:broker_username].nil? ||
+    options[:broker_password].nil?
+
+end
+
+begin
+  parse_arguments
+rescue
+  puts usage
+  exit 2
+end
+
+exit 0
