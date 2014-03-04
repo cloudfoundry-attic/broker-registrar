@@ -20,15 +20,24 @@ describe 'Broker Registrar command line app' do
     let(:cf_address) { 'https://api.10.244.0.34.xip.io' }
     let(:cf_username) { 'admin' }
     let(:cf_password) { 'admin' }
-    let(:broker_name) { 'cassandra' }
-    let(:broker_url) { 'http://10.244.3.70' }
-    let(:broker_username) { 'mr_broker' }
-    let(:broker_password) { 'broker123' }
+    let(:broker_name) { 'elasticsearch' }
+    let(:broker_url) { 'http://10.244.3.58' }
+    let(:broker_username) { 'admin' }
+    let(:broker_password) { 'admin' }
     let(:client) { create_client }
+    let(:test_organization) { create_organization(client) }
+    let(:test_space) { create_space(client, test_organization) }
 
     it 'returns a successful exit code' do
-      command = %Q{lib/broker-registrar register --cf-address "#{cf_address}" --cf-username "#{cf_username}" --cf-password "#{cf_password}" --broker-name "#{broker_name}" --broker-url "#{broker_url}" --broker-username "#{broker_username}" --broker-password "#{broker_password}"}
-      BlueShell::Runner.run command do |runner|
+      command = "lib/broker-registrar register --cf-address \"#{cf_address}\" " +
+        "--cf-username \"#{cf_username}\" " +
+        "--cf-password \"#{cf_password}\" " +
+        "--broker-name \"#{broker_name}\" " +
+        "--broker-url \"#{broker_url}\" " +
+        "--broker-username \"#{broker_username}\" " +
+        "--broker-password \"#{broker_password}\""
+
+      puts BlueShell::Runner.run command do |runner|
         runner.with_timeout(1) do
           runner.should have_exit_code(0)
         end
@@ -37,24 +46,53 @@ describe 'Broker Registrar command line app' do
 
     context 'the environment is clean' do
       before do
+        clean_environment
         setup_environment(client)
+        expect(client.service_brokers.first).to be_nil
+        expect(client.services.first).to be_nil
       end
 
       after do
-        broker = client.service_brokers.find { |sb| sb.name == broker_name }
-        broker.delete! if broker
+        clean_environment
       end
 
       it 'registers the service broker with the cloud controller' do
-        client = create_client
-        setup_environment(client)
-        expect(client.service_brokers.first).to be_nil
-
-        command = %Q{lib/broker-registrar register --cf-address "#{cf_address}" --cf-username "#{cf_username}" --cf-password "#{cf_password}" --broker-name "#{broker_name}" --broker-url "#{broker_url}" --broker-username "#{broker_username}" --broker-password "#{broker_password}"}
+        command = "lib/broker-registrar register --cf-address \"#{cf_address}\" " +
+          "--cf-username \"#{cf_username}\" " +
+          "--cf-password \"#{cf_password}\" " +
+          "--broker-name \"#{broker_name}\" " +
+          "--broker-url \"#{broker_url}\" " +
+          "--broker-username \"#{broker_username}\" " +
+          "--broker-password \"#{broker_password}\""
         puts `#{command}`
 
         expect(client.service_brokers.first.name).to eq(broker_name)
       end
+
+      it 'creates a service that is public and can be created' do
+        command = "lib/broker-registrar register --cf-address \"#{cf_address}\" " +
+          "--cf-username \"#{cf_username}\" " +
+          "--cf-password \"#{cf_password}\" " +
+          "--broker-name \"#{broker_name}\" " +
+          "--broker-url \"#{broker_url}\" " +
+          "--broker-username \"#{broker_username}\" " +
+          "--broker-password \"#{broker_password}\""
+        puts `#{command}`
+
+        service              = client.managed_service_instance
+        service.name         = 'test-service-instance'
+        service.space        = client.current_space
+        service.service_plan = client.service_plans.first
+        expect { service.create! }.to_not raise_error
+      end
+    end
+
+    def find_service(name)
+      client.services.find { |s| s.label == name }
+    end
+
+    def find_service_broker(name)
+      client.service_brokers.find { |sb| sb.name == name }
     end
 
     def create_client
@@ -63,9 +101,23 @@ describe 'Broker Registrar command line app' do
       client
     end
 
+    def clean_environment
+      service_instances = client.service_instances_by_space_guid(test_space.guid)
+      service_instances.each { |si| si.delete }
+
+      service = find_service(broker_name)
+      if service
+        service.service_plans.each { |sp| sp.delete! }
+        service.delete!
+      end
+
+      service_broker = find_service_broker(broker_name)
+      service_broker.delete if service_broker
+    end
+
     def setup_environment(client)
-      client.current_organization = create_organization(client)
-      client.current_space = create_space(client, client.current_organization)
+      client.current_organization = test_organization
+      client.current_space = test_space
     end
 
     def create_organization(client)
@@ -86,6 +138,7 @@ describe 'Broker Registrar command line app' do
       begin
         space.create!
       rescue CFoundry::SpaceNameTaken
+        space = client.spaces.find { |s| s.name == 'test_broker_registrar-space' }
       end
       space
     end
