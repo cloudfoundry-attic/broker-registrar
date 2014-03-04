@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'optparse'
+require 'cfoundry'
 
 def usage
   'Usage: --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
@@ -11,42 +12,59 @@ def parse_arguments
   option_parser = OptionParser.new do |opts|
     opts.banner = usage
 
-    opts.on("--cf-address URL", "Cloud Foundry URL") do |cf_address|
+    opts.on('--cf-address URL', 'Cloud Foundry URL') do |cf_address|
       options[:cf_address] = cf_address
     end
-    opts.on("--cf-username USERNAME", "Cloud Foundry username") do |cf_username|
+    opts.on('--cf-username USERNAME', 'Cloud Foundry username') do |cf_username|
       options[:cf_username] = cf_username
     end
-    opts.on("--cf-password PASSWORD", "Cloud Foundry password") do |cf_password|
+    opts.on('--cf-password PASSWORD', 'Cloud Foundry password') do |cf_password|
       options[:cf_password] = cf_password
     end
-    opts.on("--broker-name BROKER_NAME", "Broker name") do |broker_name|
+    opts.on('--broker-name BROKER_NAME', 'Broker name') do |broker_name|
       options[:broker_name] = broker_name
     end
-    opts.on("--broker-url BROKER_URL", "Broker URL") do |broker_url|
+    opts.on('--broker-url BROKER_URL', 'Broker URL') do |broker_url|
       options[:broker_url] = broker_url
     end
-    opts.on("--broker-username BROKER_USERNAME", "Broker username") do |broker_username|
+    opts.on('--broker-username BROKER_USERNAME', 'Broker username') do |broker_username|
       options[:broker_username] = broker_username
     end
-    opts.on("--broker-password BROKER_PASSWORD", "Broker password") do |broker_password|
+    opts.on('--broker-password BROKER_PASSWORD', 'Broker password') do |broker_password|
       options[:broker_password] = broker_password
     end
   end
 
   option_parser.parse!
 
-  raise OptionParser::MissingArgument.new("cf-address") if options[:cf_address].nil?
-  raise OptionParser::MissingArgument.new("cf-username") if options[:cf_username].nil?
-  raise OptionParser::MissingArgument.new("cf-password") if options[:cf_password].nil?
-  raise OptionParser::MissingArgument.new("broker-name") if options[:broker_name].nil?
-  raise OptionParser::MissingArgument.new("broker-url") if options[:broker_url].nil?
-  raise OptionParser::MissingArgument.new("broker-username") if options[:broker_username].nil?
-  raise OptionParser::MissingArgument.new("broker-password") if options[:broker_password].nil?
+  raise OptionParser::MissingArgument.new('cf-address') if options[:cf_address].nil?
+  raise OptionParser::MissingArgument.new('cf-username') if options[:cf_username].nil?
+  raise OptionParser::MissingArgument.new('cf-password') if options[:cf_password].nil?
+  raise OptionParser::MissingArgument.new('broker-name') if options[:broker_name].nil?
+  raise OptionParser::MissingArgument.new('broker-url') if options[:broker_url].nil?
+  raise OptionParser::MissingArgument.new('broker-username') if options[:broker_username].nil?
+  raise OptionParser::MissingArgument.new('broker-password') if options[:broker_password].nil?
+
+  options
 end
 
 begin
-  parse_arguments
+  args = parse_arguments
+
+  client = CFoundry::V2::Client.new(args[:cf_address])
+  client.login(username: args[:cf_username], password: args[:cf_password])
+
+
+  broker = client.service_broker
+  broker.name = args[:broker_name]
+  broker.broker_url = args[:broker_url]
+  broker.auth_username = args[:broker_username]
+  broker.auth_password = args[:broker_password]
+
+  puts "Adding service broker #{broker.name}"
+
+  broker.create!
+
 rescue => e
   puts usage
   puts e.message
