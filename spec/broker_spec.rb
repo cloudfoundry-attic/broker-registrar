@@ -1,9 +1,10 @@
 require 'blue-shell'
 require 'cfoundry'
+require 'spec_helper'
 
 include BlueShell::Matchers
 
-describe 'Broker Registrar command line app' do
+describe 'Broker Registrar command line app', :vcr do
   context 'does not receive all the parameters' do
     it 'returns a validation error' do
       BlueShell::Runner.run 'lib/broker-registrar register' do |runner|
