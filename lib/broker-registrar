@@ -49,7 +49,7 @@ def parse_arguments
   options
 end
 
-def create_service_broker(args, client)
+def find_or_create_service_broker!(args, client)
   broker               = client.service_broker
   broker.name          = args[:broker_name]
   broker.broker_url    = args[:broker_url]
@@ -57,7 +57,16 @@ def create_service_broker(args, client)
   broker.auth_password = args[:broker_password]
   puts "Adding service broker #{broker.name}"
 
-  broker.create!
+  begin
+    broker.create!
+  rescue CFoundry::APIError => e
+    if e.error_code == 270003
+      broker = client.service_broker_by_name(args[:broker_name])
+    else
+      raise e
+    end
+  end
+
   broker
 end
 
@@ -90,7 +99,7 @@ begin
   client = CFoundry::V2::Client.new(args[:cf_address])
   client.login(username: args[:cf_username], password: args[:cf_password])
 
-  broker   = create_service_broker(args, client)
+  broker   = find_or_create_service_broker!(args, client)
   services = get_services_for_broker(client, broker.broker_url, args[:broker_username], args[:broker_password])
   puts 'Found services for new broker: ' + services.map(&:label).join(', ')
   make_services_plans_public(services)
@@ -98,6 +107,8 @@ begin
 rescue => e
   puts usage
   puts e.message
+  puts e.backtrace
+
   exit 2
 end
 
