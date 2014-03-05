@@ -83,6 +83,22 @@ describe 'Broker Registrar command line app' do
           end
         end
       end
+
+      context 'and a non-public service plan already exists' do
+        before do
+          create_service_broker
+          service_plan = client.service_plans.first
+          service_plan.public = false
+          service_plan.update!
+        end
+
+        it 'makes the service plan public' do
+          puts `#{command}`
+
+          service_plan = client.service_plans.first
+          expect(is_service_plan_public?(service_plan)).to be_true
+        end
+      end
     end
 
     def find_service(name)
