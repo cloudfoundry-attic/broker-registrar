@@ -6,7 +6,7 @@ require 'httparty'
 require_relative '../lib/broker_registrar'
 
 def usage
-  'Usage: --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
+  'Usage: broker-registrar register --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
 end
 
 def parse_arguments
