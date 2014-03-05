@@ -37,67 +37,65 @@ describe 'Broker Registrar command line app' do
         "--broker-password \"#{broker_password}\""
     end
 
-    context 'the environment is clean' do
-      before do
-        clean_environment
-        setup_environment(client)
-        expect(client.service_brokers.first).to be_nil
-        expect(client.services.first).to be_nil
-      end
+    before do
+      clean_environment
+      setup_environment(client)
+      expect(client.service_brokers.first).to be_nil
+      expect(client.services.first).to be_nil
+    end
 
-      after do
-        clean_environment
-      end
+    after do
+      clean_environment
+    end
 
-      it 'returns a successful exit code' do
-        puts BlueShell::Runner.run command do |runner|
-          runner.with_timeout(1) do
-            runner.should have_exit_code(0)
-          end
+    it 'returns a successful exit code' do
+      puts BlueShell::Runner.run command do |runner|
+        runner.with_timeout(1) do
+          runner.should have_exit_code(0)
+        end
+      end
+    end
+
+    it 'registers the service broker with the cloud controller' do
+      puts `#{command}`
+
+      expect(client.service_brokers.first.name).to eq(broker_name)
+    end
+
+    it 'creates a service that is public and can be created' do
+      puts `#{command}`
+
+      service_plan = client.service_plans.first
+      expect(is_service_plan_public?(service_plan)).to be_true
+    end
+
+    it 'can be run twice successfully' do
+      BlueShell::Runner.run command do |runner|
+        runner.with_timeout(1) do
+          runner.should have_exit_code(0)
         end
       end
 
-      it 'registers the service broker with the cloud controller' do
-        puts `#{command}`
+      BlueShell::Runner.run command do |runner|
+        runner.with_timeout(1) do
+          runner.should have_exit_code(0)
+        end
+      end
+    end
 
-        expect(client.service_brokers.first.name).to eq(broker_name)
+    context 'and a non-public service plan already exists' do
+      before do
+        create_service_broker
+        service_plan = client.service_plans.first
+        service_plan.public = false
+        service_plan.update!
       end
 
-      it 'creates a service that is public and can be created' do
+      it 'makes the service plan public' do
         puts `#{command}`
 
         service_plan = client.service_plans.first
         expect(is_service_plan_public?(service_plan)).to be_true
-      end
-
-      it 'can be run twice successfully' do
-        BlueShell::Runner.run command do |runner|
-          runner.with_timeout(1) do
-            runner.should have_exit_code(0)
-          end
-        end
-
-        BlueShell::Runner.run command do |runner|
-          runner.with_timeout(1) do
-            runner.should have_exit_code(0)
-          end
-        end
-      end
-
-      context 'and a non-public service plan already exists' do
-        before do
-          create_service_broker
-          service_plan = client.service_plans.first
-          service_plan.public = false
-          service_plan.update!
-        end
-
-        it 'makes the service plan public' do
-          puts `#{command}`
-
-          service_plan = client.service_plans.first
-          expect(is_service_plan_public?(service_plan)).to be_true
-        end
       end
     end
 
