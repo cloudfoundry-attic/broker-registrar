@@ -55,10 +55,7 @@ begin
 
 rescue => e
   puts usage
-  puts e.message
-  puts e.backtrace
-
-  exit 2
+  raise e
 end
 
 exit 0

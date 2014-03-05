@@ -14,7 +14,7 @@ describe 'Broker Registrar command line app' do
         runner.with_timeout(1) do
           runner.should have_output 'Usage: --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
           runner.should have_output 'missing argument: cf-address'
-          runner.should have_exit_code(2)
+          runner.should have_exit_code(1)
         end
       end
     end
