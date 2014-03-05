@@ -4,6 +4,10 @@ require 'cfoundry'
 include BlueShell::Matchers
 
 describe 'Broker Registrar command line app' do
+  before(:all) do
+    @config = YAML.load_file('spec/config.yml')
+  end
+
   context 'does not receive all the parameters' do
     it 'returns a validation error' do
       BlueShell::Runner.run 'app/broker-registrar register' do |runner|
@@ -17,13 +21,13 @@ describe 'Broker Registrar command line app' do
   end
 
   context 'does include all the parameters' do
-    let(:cf_address) { 'https://api.10.244.0.34.xip.io' }
-    let(:cf_username) { 'admin' }
-    let(:cf_password) { 'admin' }
+    let(:cf_address) { @config['cloud_foundry']['url'] }
+    let(:cf_username) { @config['cloud_foundry']['username'] }
+    let(:cf_password) { @config['cloud_foundry']['password'] }
     let(:broker_name) { 'elasticsearch' }
-    let(:broker_url) { 'http://10.244.3.58' }
-    let(:broker_username) { 'admin' }
-    let(:broker_password) { 'admin' }
+    let(:broker_url) { @config['broker']['url'] }
+    let(:broker_username) { @config['broker']['username'] }
+    let(:broker_password) { @config['broker']['password'] }
     let(:client) { create_client }
     let(:test_organization) { create_organization(client) }
     let(:test_space) { create_space(client, test_organization) }
