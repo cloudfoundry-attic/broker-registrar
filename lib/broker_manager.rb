@@ -1,18 +1,22 @@
 class BrokerManager
 
-  def find_or_create_service_broker!(args, client)
+  def initialize(client)
+    @client = client
+  end
+
+  def find_or_create_service_broker!(broker_name, broker_url, broker_username, broker_password)
     broker               = client.service_broker
-    broker.name          = args[:broker_name]
-    broker.broker_url    = args[:broker_url]
-    broker.auth_username = args[:broker_username]
-    broker.auth_password = args[:broker_password]
+    broker.name          = broker_name
+    broker.broker_url    = broker_url
+    broker.auth_username = broker_username
+    broker.auth_password = broker_password
     puts "Adding service broker #{broker.name}"
 
     begin
       broker.create!
     rescue CFoundry::APIError => e
       if e.error_code == 270003
-        broker = client.service_broker_by_name(args[:broker_name])
+        broker = client.service_broker_by_name(broker_name)
       else
         raise e
       end
@@ -21,7 +25,7 @@ class BrokerManager
     broker
   end
 
-  def get_services_for_broker(client, broker_url, broker_username, broker_password)
+  def get_services_for_broker(broker_url, broker_username, broker_password)
     credentials = { username: broker_username, password: broker_password }
     response = HTTParty.get("#{broker_url}/v2/catalog", basic_auth: credentials)
     broker_provided_ids = extract_broker_provided_ids(response)
@@ -41,6 +45,8 @@ class BrokerManager
   end
 
   private
+
+  attr_reader :client
 
   def extract_broker_provided_ids(response)
     response['services'].map { |s| s['id'] }
