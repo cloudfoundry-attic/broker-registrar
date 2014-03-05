@@ -53,6 +53,25 @@ describe BrokerManager, :vcr do
         expect(broker.name).to eq(broker_name)
         expect(broker.broker_url).to eq(broker_url)
       end
+
+      context 'with different details' do
+        before do
+          requested_broker = double('requested_broker').as_null_object
+          expect(requested_broker).to receive(:create!).and_raise(CFoundry::APIError.new(nil, 270_003))
+          expect(client).to receive(:service_broker).and_return(requested_broker)
+        end
+
+        it 'updates the url, username and password' do
+          returned_broker = double('returned_broker')
+          expect(client).to receive(:service_broker_by_name).and_return(returned_broker)
+          expect(returned_broker).to receive(:broker_url=).with("new_url")
+          expect(returned_broker).to receive(:auth_username=).with("new_username")
+          expect(returned_broker).to receive(:auth_password=).with("new_password")
+          expect(returned_broker).to receive(:update!)
+
+          subject.find_or_create_service_broker!(broker_name, "new_url", "new_username", "new_password")
+        end
+      end
     end
 
     context 'broker creation fails unexpectedly' do

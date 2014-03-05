@@ -99,12 +99,31 @@ describe 'Broker Registrar command line app' do
       end
     end
 
-    def find_service(name)
-      client.services.find { |s| s.label == name }
+    context 'and the service broker already exists with different details' do
+      before do
+        create_service_broker
+      end
+
+      let(:new_command) do
+        "app/broker-registrar register --cf-address \"#{cf_address}\" " +
+          "--cf-username \"#{cf_username}\" " +
+          "--cf-password \"#{cf_password}\" " +
+          "--broker-name \"#{broker_name}\" " +
+          "--broker-url \"#{new_broker_url}\" " +
+          "--broker-username \"#{broker_username}\" " +
+          "--broker-password \"#{broker_password}\""
+      end
+      let(:new_broker_url) { 'http://10.244.3.62' }
+
+      it 'sets the broker details as requested' do
+        `#{new_command}`
+        broker = client.service_broker_by_name(broker_name)
+        expect(broker.broker_url).to eq(new_broker_url)
+      end
     end
 
-    def find_service_broker(name)
-      client.service_brokers.find { |sb| sb.name == name }
+    def find_service(name)
+      client.services.find { |s| s.label == name }
     end
 
     def create_client
@@ -123,7 +142,7 @@ describe 'Broker Registrar command line app' do
         service.delete!
       end
 
-      service_broker = find_service_broker(broker_name)
+      service_broker = client.service_broker_by_name(broker_name)
       service_broker.delete if service_broker
     end
 
@@ -156,9 +175,9 @@ describe 'Broker Registrar command line app' do
     end
 
     def create_service_broker
-      broker               = client.service_broker
-      broker.name          = broker_name
-      broker.broker_url    = broker_url
+      broker = client.service_broker
+      broker.name = broker_name
+      broker.broker_url = broker_url
       broker.auth_username = broker_username
       broker.auth_password = broker_password
 
@@ -167,9 +186,9 @@ describe 'Broker Registrar command line app' do
     end
 
     def is_service_plan_public?(service_plan)
-      service              = client.managed_service_instance
-      service.name         = 'test-service-instance'
-      service.space        = client.current_space
+      service = client.managed_service_instance
+      service.name = 'test-service-instance'
+      service.space = client.current_space
       service.service_plan = service_plan
       begin
         service.create!

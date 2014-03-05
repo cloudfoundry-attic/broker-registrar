@@ -4,6 +4,9 @@ class BrokerManager
     @client = client
   end
 
+  SERVICE_BROKER_NAME_IS_TAKEN = 270_002
+  SERVICE_BROKER_URL_IS_TAKEN = 270_003
+
   def find_or_create_service_broker!(broker_name, broker_url, broker_username, broker_password)
     broker               = client.service_broker
     broker.name          = broker_name
@@ -15,8 +18,10 @@ class BrokerManager
     begin
       broker.create!
     rescue CFoundry::APIError => e
-      if e.error_code == 270003
+      case e.error_code
+      when SERVICE_BROKER_NAME_IS_TAKEN, SERVICE_BROKER_URL_IS_TAKEN
         broker = client.service_broker_by_name(broker_name)
+        update_service_broker(broker, broker_url, broker_username, broker_password)
       else
         raise e
       end
@@ -47,6 +52,13 @@ class BrokerManager
   private
 
   attr_reader :client
+
+  def update_service_broker(broker, new_url, new_username, new_password)
+    broker.broker_url = new_url
+    broker.auth_username = new_username
+    broker.auth_password = new_password
+    broker.update!
+  end
 
   def extract_broker_provided_ids(response)
     response['services'].map { |s| s['id'] }
