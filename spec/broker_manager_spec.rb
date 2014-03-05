@@ -1,10 +1,15 @@
-#require 'spec_helper'
+require 'spec_helper'
 require 'cfoundry'
 require_relative '../lib/broker_manager'
 
-describe BrokerManager do
+describe BrokerManager, :vcr do
   before(:all) do
     @config = YAML.load_file('spec/config.yml')
+  end
+
+  before(:each) do
+    # Avoid token expiry when using VCR to record Cloud Foundry API calls
+    allow_any_instance_of(CFoundry::AuthToken).to receive(:expiration).and_return(Time.now + 100_000)
   end
 
   let(:client) do

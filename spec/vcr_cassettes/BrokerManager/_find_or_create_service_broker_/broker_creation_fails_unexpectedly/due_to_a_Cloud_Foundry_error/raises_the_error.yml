@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.10.244.0.34.xip.io/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '265'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:13 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - e5a5d61d-5ac0-4224-b3f6-ca7250467536
+    body:
+      encoding: UTF-8
+      string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
+        Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:49 GMT
+- request:
+    method: get
+    uri: https://api.10.244.0.34.xip.io/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '265'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:13 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 43c45ae0-6818-46ae-97b2-477a98dd483a
+    body:
+      encoding: UTF-8
+      string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
+        Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:49 GMT
+- request:
+    method: post
+    uri: http://cf:@login.10.244.0.34.xip.io/oauth/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&username=admin&password=admin
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json;charset=utf-8
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=utf-8
+      Content-Length:
+      - 49
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      - no-store
+      - no-store
+      Content-Length:
+      - '1965'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:14 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      - no-cache
+      Server:
+      - Apache-Coyote/1.1
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJjNTJmODgwMS1lNzBmLTQxMDAtODE5OC1kMDg5NzE0NGRhZDUiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1NCwiZXhwIjoxMzk0MDM2MzU0LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.IQ1EnHukpZ_E4k57ktpVjvoEEIfsijcN4nSDivSFzOsIeBvn1zHuwBGWLIv7N48ZLhtlSpcsqV-bWdocM0L-ZNO_5tKMmedxlUXy6wn7CUF-HRSrL_vUUxFP9ubzGwBZ0ogqRNVb0UPMI4uy7pJLD1_e44DLIgr6dqbkE5hAEIA","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI5YTZjNjQ2Ny02YTUwLTQzZTMtOTA4Ni01ZmZlNThkYWYwNWEiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjEzOTQwMzU3NTQsImV4cCI6MTM5NjYyNzc1NCwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdfQ.afh1MlDSXxzXn9l9eClpya_1r6klJHk_TgxSkCycb43uBLaQp79ox9C0PcPUu0mZr9RXvueWF2O1-csOjEnJMnDh9xT1WSOEdTcFpr7WKbBl07YLKCBPg-_jMtKb77NOZXLxlwNfJL7a6DGFVq2JYk_lld-4gxRWr1SGsR8RrBg","expires_in":599,"scope":"cloud_controller.admin
+        cloud_controller.read cloud_controller.write openid password.write scim.read
+        scim.write","jti":"c52f8801-e70f-4100-8198-d0897144dad5"}'
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:49 GMT
+recorded_with: VCR 2.8.0

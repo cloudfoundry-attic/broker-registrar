@@ -1,0 +1,296 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.10.244.0.34.xip.io/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '265'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:11 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 0f514fa3-1bdd-4d3f-b33d-0d8d7522917f
+    body:
+      encoding: UTF-8
+      string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
+        Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:46 GMT
+- request:
+    method: get
+    uri: https://api.10.244.0.34.xip.io/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '265'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:11 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 1d821c01-ff37-40c1-859e-e7fe24ee59b3
+    body:
+      encoding: UTF-8
+      string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
+        Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:46 GMT
+- request:
+    method: post
+    uri: http://cf:@login.10.244.0.34.xip.io/oauth/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&username=admin&password=admin
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json;charset=utf-8
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=utf-8
+      Content-Length:
+      - 49
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      - no-store
+      - no-store
+      Content-Length:
+      - '1965'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:12 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      - no-cache
+      Server:
+      - Apache-Coyote/1.1
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwZjcyNmEzOC03OTEyLTRmN2EtYmM4MC1kMDJmNzE3NDYzOGQiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MiwiZXhwIjoxMzk0MDM2MzUyLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.Yx4eZoTLZAl2NpLyGKkEOGqI-eu9tSxS8iXixh3lGDm8ttO_k6Re-WzDCGYHVH3U7iTLFgBGsHfFniG6Pm8iehDC0F0aDLYvlq2XtCHJfKs5g35KfsREHSXM-NY9Folapr3ilMmO5jQELrjFAIzdXojpXgHGeDugx8plWF0X988","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJmOTJiZjExYS04ZTk2LTQxNDktYWQ0Yy1iOThiNGE1MzY0NjMiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjEzOTQwMzU3NTIsImV4cCI6MTM5NjYyNzc1MiwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdfQ.o34VAtkJglnc5uVcEAfg3gyjquNVlvbcWv3Vf4M6fMR2g5gi7c3SBksLJvbLKQqH3WMYmLphvTcvzkewiFUYC-AeiVN2f5t2kJiX5t-v48evV92J8kEt0fbvW1U__SEQDF-tbadaLeX8TPf7dELbxgsl1zk0xYhXTTN0loBKLAQ","expires_in":599,"scope":"cloud_controller.admin
+        cloud_controller.read cloud_controller.write openid password.write scim.read
+        scim.write","jti":"0f726a38-7912-4f7a-bc80-d02f7174638d"}'
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+- request:
+    method: post
+    uri: https://api.10.244.0.34.xip.io/v2/service_brokers
+    body:
+      encoding: UTF-8
+      string: '{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin","auth_password":"admin"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 106
+      Authorization:
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwZjcyNmEzOC03OTEyLTRmN2EtYmM4MC1kMDJmNzE3NDYzOGQiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MiwiZXhwIjoxMzk0MDM2MzUyLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.Yx4eZoTLZAl2NpLyGKkEOGqI-eu9tSxS8iXixh3lGDm8ttO_k6Re-WzDCGYHVH3U7iTLFgBGsHfFniG6Pm8iehDC0F0aDLYvlq2XtCHJfKs5g35KfsREHSXM-NY9Folapr3ilMmO5jQELrjFAIzdXojpXgHGeDugx8plWF0X988
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Length:
+      - '333'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:13 GMT
+      Location:
+      - /v2/service_brokers/921ebadc-e4a3-4929-80a7-e96a13456917
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 69b3d136-b3a8-48a4-a930-4d47171e1292
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "metadata": {
+            "guid": "921ebadc-e4a3-4929-80a7-e96a13456917",
+            "created_at": "2014-03-05T16:09:12+00:00",
+            "updated_at": null,
+            "url": "/v2/service_brokers/921ebadc-e4a3-4929-80a7-e96a13456917"
+          },
+          "entity": {
+            "name": "elasticsearch",
+            "broker_url": "http://10.244.3.58",
+            "auth_username": "admin"
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+- request:
+    method: get
+    uri: https://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 0
+      Authorization:
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwZjcyNmEzOC03OTEyLTRmN2EtYmM4MC1kMDJmNzE3NDYzOGQiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MiwiZXhwIjoxMzk0MDM2MzUyLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.Yx4eZoTLZAl2NpLyGKkEOGqI-eu9tSxS8iXixh3lGDm8ttO_k6Re-WzDCGYHVH3U7iTLFgBGsHfFniG6Pm8iehDC0F0aDLYvlq2XtCHJfKs5g35KfsREHSXM-NY9Folapr3ilMmO5jQELrjFAIzdXojpXgHGeDugx8plWF0X988
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '358'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:13 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - d9def8dc-8314-4042-a984-18547a8389b0
+    body:
+      encoding: UTF-8
+      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"921ebadc-e4a3-4929-80a7-e96a13456917","created_at":"2014-03-05T16:09:12+00:00","updated_at":null,"url":"/v2/service_brokers/921ebadc-e4a3-4929-80a7-e96a13456917"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+- request:
+    method: get
+    uri: https://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 0
+      Authorization:
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwZjcyNmEzOC03OTEyLTRmN2EtYmM4MC1kMDJmNzE3NDYzOGQiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MiwiZXhwIjoxMzk0MDM2MzUyLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.Yx4eZoTLZAl2NpLyGKkEOGqI-eu9tSxS8iXixh3lGDm8ttO_k6Re-WzDCGYHVH3U7iTLFgBGsHfFniG6Pm8iehDC0F0aDLYvlq2XtCHJfKs5g35KfsREHSXM-NY9Folapr3ilMmO5jQELrjFAIzdXojpXgHGeDugx8plWF0X988
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '358'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 05 Mar 2014 16:09:13 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - ad3de6c2-0c63-4e80-b783-ecc5afe24555
+    body:
+      encoding: UTF-8
+      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"921ebadc-e4a3-4929-80a7-e96a13456917","created_at":"2014-03-05T16:09:12+00:00","updated_at":null,"url":"/v2/service_brokers/921ebadc-e4a3-4929-80a7-e96a13456917"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+- request:
+    method: delete
+    uri: https://api.10.244.0.34.xip.io/v2/service_brokers/921ebadc-e4a3-4929-80a7-e96a13456917
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 0
+      Authorization:
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwZjcyNmEzOC03OTEyLTRmN2EtYmM4MC1kMDJmNzE3NDYzOGQiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MiwiZXhwIjoxMzk0MDM2MzUyLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.Yx4eZoTLZAl2NpLyGKkEOGqI-eu9tSxS8iXixh3lGDm8ttO_k6Re-WzDCGYHVH3U7iTLFgBGsHfFniG6Pm8iehDC0F0aDLYvlq2XtCHJfKs5g35KfsREHSXM-NY9Folapr3ilMmO5jQELrjFAIzdXojpXgHGeDugx8plWF0X988
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Wed, 05 Mar 2014 16:09:13 GMT
+      Server:
+      - nginx
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - d0b19120-32b0-45c8-9d88-4f25009c399e
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+recorded_with: VCR 2.8.0
