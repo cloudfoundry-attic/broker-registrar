@@ -201,6 +201,5 @@ describe 'Broker Registrar command line app' do
         false
       end
     end
-
   end
 end

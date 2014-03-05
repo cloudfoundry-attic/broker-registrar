@@ -13,15 +13,16 @@ class BrokerManager
     broker.broker_url    = broker_url
     broker.auth_username = broker_username
     broker.auth_password = broker_password
-    puts "Adding service broker #{broker.name}"
 
     begin
       broker.create!
+      puts "Registered service broker [#{broker.name}]"
     rescue CFoundry::APIError => e
       case e.error_code
       when SERVICE_BROKER_NAME_IS_TAKEN, SERVICE_BROKER_URL_IS_TAKEN
         broker = client.service_broker_by_name(broker_name)
         update_service_broker(broker, broker_url, broker_username, broker_password)
+        puts "Updated existing service broker [#{broker_name}]"
       else
         raise e
       end
@@ -44,9 +45,9 @@ class BrokerManager
   end
 
   def make_service_plan_public(service_plan)
-    puts "Making service plan #{service_plan.name} public"
     service_plan.public = true
     service_plan.update!
+    puts "Made service plan [#{service_plan.name}] public"
   end
 
   private
@@ -63,5 +64,4 @@ class BrokerManager
   def extract_broker_provided_ids(response)
     response['services'].map { |s| s['id'] }
   end
-
 end

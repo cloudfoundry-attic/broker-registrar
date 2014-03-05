@@ -13,7 +13,6 @@ class BrokerRegistrar
                                                            args[:broker_username],
                                                            args[:broker_password])
     services = broker_manager.get_services_for_broker(broker.broker_url, args[:broker_username], args[:broker_password])
-    puts 'Found services for new broker: ' + services.map(&:label).join(', ')
     broker_manager.make_services_plans_public(services)
   end
 

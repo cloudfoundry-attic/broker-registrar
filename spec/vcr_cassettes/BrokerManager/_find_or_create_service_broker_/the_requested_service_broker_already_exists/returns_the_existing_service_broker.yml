@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.10.244.0.34.xip.io/info
+    uri: http://api.10.244.0.34.xip.io/info
     body:
       encoding: US-ASCII
       string: ''
@@ -25,22 +25,22 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:55 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 0c6b9862-588d-4087-a724-7e3fc4036e9c
+      - 4819aba4-83cf-4817-a8d8-b6d4d3226fdf
     body:
       encoding: UTF-8
       string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
         Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: get
-    uri: https://api.10.244.0.34.xip.io/info
+    uri: http://api.10.244.0.34.xip.io/info
     body:
       encoding: US-ASCII
       string: ''
@@ -63,19 +63,19 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:55 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 55e7adb4-307d-46b5-a323-aebc011cf133
+      - 133d103a-08c9-47ba-918c-6c0d871c62ef
     body:
       encoding: UTF-8
       string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
         Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: post
     uri: http://cf:@login.10.244.0.34.xip.io/oauth/token
@@ -107,7 +107,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 05 Mar 2014 16:09:12 GMT
+      - Wed, 05 Mar 2014 16:30:55 GMT
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Pragma:
@@ -117,14 +117,14 @@ http_interactions:
       - Apache-Coyote/1.1
     body:
       encoding: UTF-8
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzMzM2ZmM2NC00ODA1LTQ3MmEtYWEwOC04ZDBlNTU2NDc4YTciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MywiZXhwIjoxMzk0MDM2MzUzLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.chf1TSbsGbpgaGLCQrGHo1sLkJEl06lM6TuGJXDLxizHvPPwrZ2ES-JlnGH_zNZpOpWFft6nkm90LFOlBmab8CKxLD6RuZBuWuA0lOo3fj6JUcRgpTePL1v7Jf0vhewAc5pTc5JM77iInTdITO7AULRhSDT_0AEpk-yrIUdZDaA","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIxYjhjZGU3My04MzJiLTQ3MGYtYWU3Zi1lZmNkNzg0MmJiNWUiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjEzOTQwMzU3NTMsImV4cCI6MTM5NjYyNzc1MywiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdfQ.sqEuQsrxXx-3h2UrJkYS05FMvnQ1B5-9NUKm5oTn_wZHi-lzffLdvkrHuoWtoikGEVnU_reIgOjSGNKqd0-hAaWNpoGyr4fAVUkQ1--fI4OmbKXn-g-xiRHhMN091aexO76qywW9SmYPu6kjaiVF3ZTPHROuQjSN75F0b6YyKOk","expires_in":599,"scope":"cloud_controller.admin
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJjYTFkMzY2NS1hOWU1LTQzZTktODZjNi0yNmE0NzQ4Nzc0MGMiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjEzOTQwMzcwNTUsImV4cCI6MTM5NjYyOTA1NSwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdfQ.UisXPEJSinD5d857Wf2zdf9mK_gP1TIR1FfmuDFn8zxQpSr5nWTsKcqmlRb3QxawUR3L3aNBdH07mGlX1n87DHRk5gPicn4QU1Oxng1fofcSqnqAWFwYRSnIQkxaOkKP2o2-feqy4tGapyS36bgmhA09M2zuUaIPyDjJR_Q6UIs","expires_in":599,"scope":"cloud_controller.admin
         cloud_controller.read cloud_controller.write openid password.write scim.read
-        scim.write","jti":"3336fc64-4805-472a-aa08-8d0e556478a7"}'
+        scim.write","jti":"b38a0a2b-3fd0-442b-b457-eb50603ad3b7"}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: post
-    uri: https://api.10.244.0.34.xip.io/v2/service_brokers
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers
     body:
       encoding: UTF-8
       string: '{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin","auth_password":"admin"}'
@@ -138,7 +138,7 @@ http_interactions:
       Content-Length:
       - 106
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzMzM2ZmM2NC00ODA1LTQ3MmEtYWEwOC04ZDBlNTU2NDc4YTciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MywiZXhwIjoxMzk0MDM2MzUzLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.chf1TSbsGbpgaGLCQrGHo1sLkJEl06lM6TuGJXDLxizHvPPwrZ2ES-JlnGH_zNZpOpWFft6nkm90LFOlBmab8CKxLD6RuZBuWuA0lOo3fj6JUcRgpTePL1v7Jf0vhewAc5pTc5JM77iInTdITO7AULRhSDT_0AEpk-yrIUdZDaA
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
       Content-Type:
       - application/json
   response:
@@ -151,24 +151,24 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:55 GMT
       Location:
-      - /v2/service_brokers/a0880df4-4746-4730-9ca9-c30c0b74a380
+      - /v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - a9e7aef8-7474-489d-b0bf-8e04c5edda68
+      - 47894dc5-efa4-4d1e-99b9-9ec376c7a5f8
     body:
       encoding: UTF-8
       string: |-
         {
           "metadata": {
-            "guid": "a0880df4-4746-4730-9ca9-c30c0b74a380",
-            "created_at": "2014-03-05T16:09:13+00:00",
+            "guid": "3fd58ccd-8631-48aa-bdee-91f58ab94a22",
+            "created_at": "2014-03-05T16:30:55+00:00",
             "updated_at": null,
-            "url": "/v2/service_brokers/a0880df4-4746-4730-9ca9-c30c0b74a380"
+            "url": "/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"
           },
           "entity": {
             "name": "elasticsearch",
@@ -177,10 +177,10 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: post
-    uri: https://api.10.244.0.34.xip.io/v2/service_brokers
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers
     body:
       encoding: UTF-8
       string: '{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin","auth_password":"admin"}'
@@ -194,7 +194,7 @@ http_interactions:
       Content-Length:
       - 106
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzMzM2ZmM2NC00ODA1LTQ3MmEtYWEwOC04ZDBlNTU2NDc4YTciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MywiZXhwIjoxMzk0MDM2MzUzLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.chf1TSbsGbpgaGLCQrGHo1sLkJEl06lM6TuGJXDLxizHvPPwrZ2ES-JlnGH_zNZpOpWFft6nkm90LFOlBmab8CKxLD6RuZBuWuA0lOo3fj6JUcRgpTePL1v7Jf0vhewAc5pTc5JM77iInTdITO7AULRhSDT_0AEpk-yrIUdZDaA
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
       Content-Type:
       - application/json
   response:
@@ -207,22 +207,22 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:55 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 270c8e63-5b2d-48eb-9a07-46aba5ee6a67
+      - 13cdd348-c2f7-4db8-ad18-1f7ed2574093
     body:
       encoding: UTF-8
       string: |
         {"code":270003,"description":"The service broker url is taken: http://10.244.3.58","error_code":"CF-ServiceBrokerUrlTaken","types":["ServiceBrokerUrlTaken","Error"],"backtrace":["/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/app/controllers/services/service_brokers_controller.rb:40:in `create'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/lib/cloud_controller/rest_controller/base.rb:96:in `dispatch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/lib/cloud_controller/rest_controller/routes.rb:16:in `block in define_route'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1540:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1540:in `block in compile!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `[]'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (3 levels) in route!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:966:in `route_eval'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (2 levels) in route!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:987:in `block in process_route'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `catch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `process_route'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:948:in `block in route!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `each'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `route!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1059:in `block in dispatch!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1056:in `dispatch!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `block in call!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `call!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:870:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/xss_header.rb:18:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/path_traversal.rb:16:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/json_csrf.rb:18:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/frame_options.rb:31:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:175:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1949:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/commonlogger.rb:33:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:212:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:79:in `catch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:1037:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:1037:in `block in spawn_threadpool'"]}
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: get
-    uri: https://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
     body:
       encoding: US-ASCII
       string: ''
@@ -236,7 +236,7 @@ http_interactions:
       Content-Length:
       - 0
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzMzM2ZmM2NC00ODA1LTQ3MmEtYWEwOC04ZDBlNTU2NDc4YTciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MywiZXhwIjoxMzk0MDM2MzUzLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.chf1TSbsGbpgaGLCQrGHo1sLkJEl06lM6TuGJXDLxizHvPPwrZ2ES-JlnGH_zNZpOpWFft6nkm90LFOlBmab8CKxLD6RuZBuWuA0lOo3fj6JUcRgpTePL1v7Jf0vhewAc5pTc5JM77iInTdITO7AULRhSDT_0AEpk-yrIUdZDaA
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
   response:
     status:
       code: 200
@@ -247,21 +247,21 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:55 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - bfd2b131-e2aa-4aee-8a0f-1d7e953cb4f6
+      - 82b98f56-c896-48a3-8ed1-6a5f738ec78e
     body:
       encoding: UTF-8
-      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"a0880df4-4746-4730-9ca9-c30c0b74a380","created_at":"2014-03-05T16:09:13+00:00","updated_at":null,"url":"/v2/service_brokers/a0880df4-4746-4730-9ca9-c30c0b74a380"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
+      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"3fd58ccd-8631-48aa-bdee-91f58ab94a22","created_at":"2014-03-05T16:30:55+00:00","updated_at":null,"url":"/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: put
-    uri: https://api.10.244.0.34.xip.io/v2/service_brokers/a0880df4-4746-4730-9ca9-c30c0b74a380
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22
     body:
       encoding: UTF-8
       string: '{"broker_url":"http://10.244.3.58","auth_username":"admin","auth_password":"admin"}'
@@ -275,7 +275,7 @@ http_interactions:
       Content-Length:
       - 83
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzMzM2ZmM2NC00ODA1LTQ3MmEtYWEwOC04ZDBlNTU2NDc4YTciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MywiZXhwIjoxMzk0MDM2MzUzLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.chf1TSbsGbpgaGLCQrGHo1sLkJEl06lM6TuGJXDLxizHvPPwrZ2ES-JlnGH_zNZpOpWFft6nkm90LFOlBmab8CKxLD6RuZBuWuA0lOo3fj6JUcRgpTePL1v7Jf0vhewAc5pTc5JM77iInTdITO7AULRhSDT_0AEpk-yrIUdZDaA
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
       Content-Type:
       - application/json
   response:
@@ -288,22 +288,22 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:56 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - aaaf36b1-5990-4df3-bd4c-b51a7bf989f6
+      - 721bb205-6838-4486-9fc3-11912e5ae70b
     body:
       encoding: UTF-8
       string: |-
         {
           "metadata": {
-            "guid": "a0880df4-4746-4730-9ca9-c30c0b74a380",
-            "created_at": "2014-03-05T16:09:13+00:00",
-            "updated_at": "2014-03-05T16:09:13+00:00",
-            "url": "/v2/service_brokers/a0880df4-4746-4730-9ca9-c30c0b74a380"
+            "guid": "3fd58ccd-8631-48aa-bdee-91f58ab94a22",
+            "created_at": "2014-03-05T16:30:55+00:00",
+            "updated_at": "2014-03-05T16:30:56+00:00",
+            "url": "/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"
           },
           "entity": {
             "name": "elasticsearch",
@@ -312,10 +312,10 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: get
-    uri: https://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
     body:
       encoding: US-ASCII
       string: ''
@@ -329,7 +329,7 @@ http_interactions:
       Content-Length:
       - 0
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzMzM2ZmM2NC00ODA1LTQ3MmEtYWEwOC04ZDBlNTU2NDc4YTciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MywiZXhwIjoxMzk0MDM2MzUzLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.chf1TSbsGbpgaGLCQrGHo1sLkJEl06lM6TuGJXDLxizHvPPwrZ2ES-JlnGH_zNZpOpWFft6nkm90LFOlBmab8CKxLD6RuZBuWuA0lOo3fj6JUcRgpTePL1v7Jf0vhewAc5pTc5JM77iInTdITO7AULRhSDT_0AEpk-yrIUdZDaA
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
   response:
     status:
       code: 200
@@ -340,21 +340,21 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:56 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - b4d6b9d9-9542-45e5-be0b-28da3f75912f
+      - d0dcb849-f94b-40c8-b781-20c104facacf
     body:
       encoding: UTF-8
-      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"a0880df4-4746-4730-9ca9-c30c0b74a380","created_at":"2014-03-05T16:09:13+00:00","updated_at":"2014-03-05T16:09:13+00:00","url":"/v2/service_brokers/a0880df4-4746-4730-9ca9-c30c0b74a380"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
+      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"3fd58ccd-8631-48aa-bdee-91f58ab94a22","created_at":"2014-03-05T16:30:55+00:00","updated_at":"2014-03-05T16:30:56+00:00","url":"/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: get
-    uri: https://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
     body:
       encoding: US-ASCII
       string: ''
@@ -368,7 +368,7 @@ http_interactions:
       Content-Length:
       - 0
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzMzM2ZmM2NC00ODA1LTQ3MmEtYWEwOC04ZDBlNTU2NDc4YTciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MywiZXhwIjoxMzk0MDM2MzUzLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.chf1TSbsGbpgaGLCQrGHo1sLkJEl06lM6TuGJXDLxizHvPPwrZ2ES-JlnGH_zNZpOpWFft6nkm90LFOlBmab8CKxLD6RuZBuWuA0lOo3fj6JUcRgpTePL1v7Jf0vhewAc5pTc5JM77iInTdITO7AULRhSDT_0AEpk-yrIUdZDaA
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
   response:
     status:
       code: 200
@@ -379,21 +379,21 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:56 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 58c9f220-37f7-4e3b-815b-e1f8e9f96dc5
+      - 60b875be-64da-4f30-9d50-178e8e2a0dcc
     body:
       encoding: UTF-8
-      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"a0880df4-4746-4730-9ca9-c30c0b74a380","created_at":"2014-03-05T16:09:13+00:00","updated_at":"2014-03-05T16:09:13+00:00","url":"/v2/service_brokers/a0880df4-4746-4730-9ca9-c30c0b74a380"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
+      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"3fd58ccd-8631-48aa-bdee-91f58ab94a22","created_at":"2014-03-05T16:30:55+00:00","updated_at":"2014-03-05T16:30:56+00:00","url":"/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 - request:
     method: delete
-    uri: https://api.10.244.0.34.xip.io/v2/service_brokers/a0880df4-4746-4730-9ca9-c30c0b74a380
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22
     body:
       encoding: US-ASCII
       string: ''
@@ -407,14 +407,14 @@ http_interactions:
       Content-Length:
       - 0
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzMzM2ZmM2NC00ODA1LTQ3MmEtYWEwOC04ZDBlNTU2NDc4YTciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNTc1MywiZXhwIjoxMzk0MDM2MzUzLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.chf1TSbsGbpgaGLCQrGHo1sLkJEl06lM6TuGJXDLxizHvPPwrZ2ES-JlnGH_zNZpOpWFft6nkm90LFOlBmab8CKxLD6RuZBuWuA0lOo3fj6JUcRgpTePL1v7Jf0vhewAc5pTc5JM77iInTdITO7AULRhSDT_0AEpk-yrIUdZDaA
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
   response:
     status:
       code: 204
       message: No Content
     headers:
       Date:
-      - Wed, 05 Mar 2014 16:09:13 GMT
+      - Wed, 05 Mar 2014 16:30:56 GMT
       Server:
       - nginx
       Transfer-Encoding:
@@ -422,10 +422,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 476d06d4-bccb-40f6-bd6f-1d519028f942
+      - 99e3e73e-a005-4c8d-9bd9-382538d2da3e
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:11:48 GMT
+  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
 recorded_with: VCR 2.8.0
