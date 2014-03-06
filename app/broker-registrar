@@ -51,11 +51,15 @@ def parse_arguments
 end
 
 begin
-  BrokerRegistrar.new.register(parse_arguments)
+  logger = Logger.new(STDOUT)
+  BrokerRegistrar.new(logger).register(parse_arguments)
 
 rescue => e
   puts usage
-  raise e
+
+  error_logger = Logger.new(STDERR)
+  error_logger.error(e)
+  exit 1
 end
 
 exit 0

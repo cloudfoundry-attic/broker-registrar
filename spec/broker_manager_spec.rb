@@ -24,7 +24,7 @@ describe BrokerManager, :vcr do
   let(:broker_username) { @config['broker']['username'] }
   let(:broker_password) { @config['broker']['password'] }
 
-  subject { described_class.new(client) }
+  subject { described_class.new(client, double('logger').as_null_object) }
 
   describe '#find_or_create_service_broker!' do
     context 'the requested service broker does not exist' do

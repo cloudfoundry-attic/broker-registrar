@@ -1,7 +1,8 @@
 class BrokerManager
 
-  def initialize(client)
+  def initialize(client, logger)
     @client = client
+    @logger = logger
   end
 
   SERVICE_BROKER_NAME_IS_TAKEN = 270_002
@@ -16,13 +17,13 @@ class BrokerManager
 
     begin
       broker.create!
-      puts "Registered service broker [#{broker.name}]"
+      logger.info "Registered service broker [#{broker.name}]"
     rescue CFoundry::APIError => e
       case e.error_code
       when SERVICE_BROKER_NAME_IS_TAKEN, SERVICE_BROKER_URL_IS_TAKEN
         broker = client.service_broker_by_name(broker_name)
         update_service_broker(broker, broker_url, broker_username, broker_password)
-        puts "Updated existing service broker [#{broker_name}]"
+        logger.info "Updated existing service broker [#{broker_name}]"
       else
         raise e
       end
@@ -47,12 +48,12 @@ class BrokerManager
   def make_service_plan_public(service_plan)
     service_plan.public = true
     service_plan.update!
-    puts "Made service plan [#{service_plan.name}] public"
+    logger.info "Made service plan [#{service_plan.name}] public"
   end
 
   private
 
-  attr_reader :client
+  attr_reader :client, :logger
 
   def update_service_broker(broker, new_url, new_username, new_password)
     broker.broker_url = new_url

@@ -12,7 +12,7 @@ describe 'Broker Registrar command line app' do
     it 'returns a validation error' do
       BlueShell::Runner.run 'app/broker-registrar register' do |runner|
         runner.with_timeout(1) do
-          runner.should have_output 'Usage: --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
+          runner.should have_output 'Usage: broker-registrar register --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
           runner.should have_output 'missing argument: cf-address'
           runner.should have_exit_code(1)
         end
