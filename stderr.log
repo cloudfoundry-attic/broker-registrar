@@ -1,2 +1,0 @@
-app/broker-registrar:42:in `parse_arguments': missing argument: cf-address (OptionParser::MissingArgument)
-	from app/broker-registrar:54:in `<main>'
