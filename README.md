@@ -3,9 +3,9 @@
 broker-registrar is a simple command-line tool to register service-brokers with Cloud Foundry.
 It is intended to be used to perform automatic broker registration during BOSH deployments.
 
-The tool is idempotent, and will update the url and credentials for the broker if they have
-changed. Since the broker name is used to reference the broker, this cannot be changed with
-this tool.
+The tool is idempotent and convergent, and will update the url and credentials for the broker 
+if they have changed. Since the broker name is used to reference the broker, it cannot be 
+changed with this tool.
 
 ## Usage
 
