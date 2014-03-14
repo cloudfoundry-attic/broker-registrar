@@ -3,6 +3,6 @@ broker:
   username: admin
   password: admin
 cloud_foundry:
-  url: https://api.10.244.0.34.xip.io
+  url: http://api.10.244.0.34.xip.io
   username: admin
   password: admin
