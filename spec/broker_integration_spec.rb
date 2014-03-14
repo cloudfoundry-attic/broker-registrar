@@ -3,14 +3,14 @@ require 'cfoundry'
 
 include BlueShell::Matchers
 
-describe 'Broker Registrar command line app' do
+describe 'Broker Registrar command line bin' do
   before(:all) do
     @config = YAML.load_file('spec/config.yml')
   end
 
   context 'does not receive all the parameters' do
     it 'returns a validation error' do
-      BlueShell::Runner.run 'app/broker-registrar register' do |runner|
+      BlueShell::Runner.run 'bin/broker-registrar register' do |runner|
         runner.with_timeout(1) do
           runner.should have_output 'Usage: broker-registrar register --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
           runner.should have_output 'missing argument: cf-address'
@@ -32,7 +32,7 @@ describe 'Broker Registrar command line app' do
     let(:test_organization) { create_organization(client) }
     let(:test_space) { create_space(client, test_organization) }
     let(:command) do
-      "app/broker-registrar register --cf-address \"#{cf_address}\" " +
+      "bin/broker-registrar register --cf-address \"#{cf_address}\" " +
         "--cf-username \"#{cf_username}\" " +
         "--cf-password \"#{cf_password}\" " +
         "--broker-name \"#{broker_name}\" " +
@@ -109,7 +109,7 @@ describe 'Broker Registrar command line app' do
       end
 
       let(:new_command) do
-        "app/broker-registrar register --cf-address \"#{cf_address}\" " +
+        "bin/broker-registrar register --cf-address \"#{cf_address}\" " +
           "--cf-username \"#{cf_username}\" " +
           "--cf-password \"#{cf_password}\" " +
           "--broker-name \"#{broker_name}\" " +
