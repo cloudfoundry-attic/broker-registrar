@@ -1,0 +1,13 @@
+#!/bin/bash
+set -x
+set -e
+export PATH=$PATH:/var/vcap/packages/ruby/bin
+cd /var/vcap/packages/broker-registrar
+bundle exec ./bin/broker-registrar register \
+    --cf-address '<%= p("cf.api_url") %>' \
+    --cf-username '<%= p("cf.username") %>' \
+    --cf-password '<%= p("cf.password") %>' \
+    --broker-name '<%= p("broker.name") %>' \
+    --broker-url 'http://<%= p("broker.url") %>:<%= p("broker.port") %>' \
+    --broker-username '<%= p("broker.username") %>' \
+    --broker-password '<%= p("broker.password") %>'

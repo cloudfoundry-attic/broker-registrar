@@ -1,0 +1,7 @@
+---
+name: broker-registrar
+packages:
+- ruby
+- broker-registrar
+templates:
+  errand.sh.erb: bin/run
