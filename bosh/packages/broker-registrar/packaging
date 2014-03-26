@@ -7,7 +7,7 @@ set -u # report the usage of uninitialized variables
 export HOME=/var/vcap
 
 
-PATH=/var/vcap/packages/git/bin:/var/vcap/packages/ruby/bin:$PATH
+PATH=/var/vcap/packages/ruby/bin:$PATH
 
 rsync -a broker-registrar/* ${BOSH_INSTALL_TARGET}
 
