@@ -1,13 +1,33 @@
 #!/bin/bash
-set -x
 set -e
 export PATH=$PATH:/var/vcap/packages/ruby/bin
-cd /var/vcap/packages/broker-registrar
+#cd /var/vcap/packages/broker-registrar
+
+CF_API_URL='<%= p("cf.api_url") %>'
+CF_ADMIN_USERNAME='<%= p("cf.admin_username") %>'
+CF_ADMIN_PASSWORD='<%= p("cf.admin_password") %>'
+BROKER_NAME='<%= p("broker.name") %>'
+BROKER_URL='http://<%= p("broker.host") %>:<%= p("broker.port") %>'
+BROKER_USERNAME='<%= p("broker.username") %>'
+BROKER_PASSWORD='<%= p("broker.password") %>'
+
+# partially-redacted command for debugging
+echo "
+bundle exec ./bin/broker-registrar register
+    --cf-address $CF_API_URL
+    --cf-username $CF_ADMIN_USERNAME
+    --cf-password ********
+    --broker-name $BROKER_NAME
+    --broker-url $BROKER_URL
+    --broker-username $BROKER_USERNAME
+    --broker-password ********
+"
+
 bundle exec ./bin/broker-registrar register \
-    --cf-address '<%= p("cf.api_url") %>' \
-    --cf-username '<%= p("cf.admin_username") %>' \
-    --cf-password '<%= p("cf.admin_password") %>' \
-    --broker-name '<%= p("broker.name") %>' \
-    --broker-url 'http://<%= p("broker.host") %>:<%= p("broker.port") %>' \
-    --broker-username '<%= p("broker.username") %>' \
-    --broker-password '<%= p("broker.password") %>'
+    --cf-address $CF_API_URL                \
+    --cf-username $CF_ADMIN_USERNAME        \
+    --cf-password $CF_ADMIN_PASSWORD        \
+    --broker-name $BROKER_NAME              \
+    --broker-url $BROKER_URL                \
+    --broker-username $BROKER_USERNAME      \
+    --broker-password $BROKER_PASSWORD
