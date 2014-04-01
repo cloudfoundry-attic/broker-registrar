@@ -46,9 +46,13 @@ class BrokerManager
   end
 
   def make_service_plan_public(service_plan)
-    service_plan.public = true
-    service_plan.update!
-    logger.info "Made service plan [#{service_plan.name}] public"
+    if service_plan.public
+      logger.info "Service plan [#{service_plan.name}] is already public"
+    else
+      service_plan.public = true
+      service_plan.update!
+      logger.info "Made service plan [#{service_plan.name}] public"
+    end
   end
 
   private
