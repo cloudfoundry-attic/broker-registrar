@@ -25,19 +25,19 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:55 GMT
+      - Wed, 09 Apr 2014 22:21:05 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 4819aba4-83cf-4817-a8d8-b6d4d3226fdf
+      - 22b0b0e4dc71b73f3460cf07fa524aef::eafaef65-3aa1-4d00-b562-cbc7c5dea4d7
     body:
       encoding: UTF-8
       string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
         Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:05 GMT
 - request:
     method: get
     uri: http://api.10.244.0.34.xip.io/info
@@ -63,19 +63,19 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:55 GMT
+      - Wed, 09 Apr 2014 22:21:05 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 133d103a-08c9-47ba-918c-6c0d871c62ef
+      - 40be2774f6d4ae7f8f6d7ab7058feb06::900af484-34d4-411b-a7e8-7cf4b0e8ffbe
     body:
       encoding: UTF-8
       string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
         Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:05 GMT
 - request:
     method: post
     uri: http://cf:@login.10.244.0.34.xip.io/oauth/token
@@ -105,9 +105,9 @@ http_interactions:
       Content-Length:
       - '1965'
       Content-Type:
-      - application/json;charset=UTF-8
+      - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:55 GMT
+      - Wed, 09 Apr 2014 22:21:04 GMT
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Pragma:
@@ -117,17 +117,17 @@ http_interactions:
       - Apache-Coyote/1.1
     body:
       encoding: UTF-8
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJjYTFkMzY2NS1hOWU1LTQzZTktODZjNi0yNmE0NzQ4Nzc0MGMiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjEzOTQwMzcwNTUsImV4cCI6MTM5NjYyOTA1NSwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdfQ.UisXPEJSinD5d857Wf2zdf9mK_gP1TIR1FfmuDFn8zxQpSr5nWTsKcqmlRb3QxawUR3L3aNBdH07mGlX1n87DHRk5gPicn4QU1Oxng1fofcSqnqAWFwYRSnIQkxaOkKP2o2-feqy4tGapyS36bgmhA09M2zuUaIPyDjJR_Q6UIs","expires_in":599,"scope":"cloud_controller.admin
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJlY2RkODg3OC0xZWNmLTQzMjMtOTExZC0yYmY2YWNmMmM4MDgiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA2NSwiZXhwIjoxMzk3MDgyNjY1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.FhtW24dHGL51KZpHPase5uGoO6BAjaz53Opk_H0dMVEuU9GffNb2FkS8_Kp2wgpgjZy9tlLFEmFjBvDOsOpDcdXBykh6x-qjwrkzmxKDIZyjQm7EpzEqpu081RxmlzlXl9EzuwbQOuTCprTL_OuYdLScHp9NqSJMMR2fvpAPQt8","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzNTgyZTIzOS03NDRiLTQwZGItYTU3Yy1lMzUwM2Q4MDQ3MmUiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjEzOTcwODIwNjUsImV4cCI6MTM5OTY3NDA2NSwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdfQ.tA0e_ErqTusrc9fApCuCoPV-BggD7anSmIJsIOZgiLWXCCYasZJ1HurXSuHB_R6nFpI-vULthF1Ggb1jW3DDyjboaoz_1XogQrubIkL3IcT4xVV7jJLHlOF9ed_k_nH6jnDlCEJNvJqCIuybm3FnFqFKO1xOjIfY7mG9Mir3hPI","expires_in":599,"scope":"cloud_controller.admin
         cloud_controller.read cloud_controller.write openid password.write scim.read
-        scim.write","jti":"b38a0a2b-3fd0-442b-b457-eb50603ad3b7"}'
+        scim.write","jti":"ecdd8878-1ecf-4323-911d-2bf6acf2c808"}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:05 GMT
 - request:
     method: post
     uri: http://api.10.244.0.34.xip.io/v2/service_brokers
     body:
       encoding: UTF-8
-      string: '{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin","auth_password":"admin"}'
+      string: '{"name":"elasticsearch","broker_url":"http://registrar-broker-1.10.244.0.34.xip.io","auth_username":"admin","auth_password":"password"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -136,9 +136,9 @@ http_interactions:
       User-Agent:
       - Ruby
       Content-Length:
-      - 106
+      - 135
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJlY2RkODg3OC0xZWNmLTQzMjMtOTExZC0yYmY2YWNmMmM4MDgiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA2NSwiZXhwIjoxMzk3MDgyNjY1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.FhtW24dHGL51KZpHPase5uGoO6BAjaz53Opk_H0dMVEuU9GffNb2FkS8_Kp2wgpgjZy9tlLFEmFjBvDOsOpDcdXBykh6x-qjwrkzmxKDIZyjQm7EpzEqpu081RxmlzlXl9EzuwbQOuTCprTL_OuYdLScHp9NqSJMMR2fvpAPQt8
       Content-Type:
       - application/json
   response:
@@ -147,79 +147,37 @@ http_interactions:
       message: Created
     headers:
       Content-Length:
-      - '333'
+      - '359'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:55 GMT
+      - Wed, 09 Apr 2014 22:21:07 GMT
       Location:
-      - /v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22
+      - /v2/service_brokers/0cd0ec48-c877-4e03-abcd-f0cc080f6891
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 47894dc5-efa4-4d1e-99b9-9ec376c7a5f8
+      - 665169b3d9f661dabbe7932f8f3524a2::ec521bb0-254c-4a0c-a093-698dd682f1b8
     body:
       encoding: UTF-8
       string: |-
         {
           "metadata": {
-            "guid": "3fd58ccd-8631-48aa-bdee-91f58ab94a22",
-            "created_at": "2014-03-05T16:30:55+00:00",
+            "guid": "0cd0ec48-c877-4e03-abcd-f0cc080f6891",
+            "created_at": "2014-04-09T22:21:05+00:00",
             "updated_at": null,
-            "url": "/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"
+            "url": "/v2/service_brokers/0cd0ec48-c877-4e03-abcd-f0cc080f6891"
           },
           "entity": {
             "name": "elasticsearch",
-            "broker_url": "http://10.244.3.58",
+            "broker_url": "http://registrar-broker-1.10.244.0.34.xip.io",
             "auth_username": "admin"
           }
         }
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
-- request:
-    method: post
-    uri: http://api.10.244.0.34.xip.io/v2/service_brokers
-    body:
-      encoding: UTF-8
-      string: '{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin","auth_password":"admin"}'
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/json
-      User-Agent:
-      - Ruby
-      Content-Length:
-      - 106
-      Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Length:
-      - '7152'
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Wed, 05 Mar 2014 16:30:55 GMT
-      Server:
-      - nginx
-      X-Content-Type-Options:
-      - nosniff
-      X-Vcap-Request-Id:
-      - 13cdd348-c2f7-4db8-ad18-1f7ed2574093
-    body:
-      encoding: UTF-8
-      string: |
-        {"code":270003,"description":"The service broker url is taken: http://10.244.3.58","error_code":"CF-ServiceBrokerUrlTaken","types":["ServiceBrokerUrlTaken","Error"],"backtrace":["/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/app/controllers/services/service_brokers_controller.rb:40:in `create'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/lib/cloud_controller/rest_controller/base.rb:96:in `dispatch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/lib/cloud_controller/rest_controller/routes.rb:16:in `block in define_route'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1540:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1540:in `block in compile!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `[]'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (3 levels) in route!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:966:in `route_eval'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (2 levels) in route!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:987:in `block in process_route'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `catch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `process_route'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:948:in `block in route!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `each'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `route!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1059:in `block in dispatch!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1056:in `dispatch!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `block in call!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `call!'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:870:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/xss_header.rb:18:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/path_traversal.rb:16:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/json_csrf.rb:18:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-protection-1.5.0/lib/rack/protection/frame_options.rb:31:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/nulllogger.rb:9:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:175:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:1949:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/urlmap.rb:65:in `block in call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `each'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/urlmap.rb:50:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/commonlogger.rb:33:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.3/lib/sinatra/base.rb:212:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:138:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:79:in `catch'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:1037:in `call'","/var/vcap/packages/cloud_controller_ng/cloud_controller_ng/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:1037:in `block in spawn_threadpool'"]}
-    http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:07 GMT
 - request:
     method: get
     uri: http://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
@@ -236,35 +194,35 @@ http_interactions:
       Content-Length:
       - 0
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJlY2RkODg3OC0xZWNmLTQzMjMtOTExZC0yYmY2YWNmMmM4MDgiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA2NSwiZXhwIjoxMzk3MDgyNjY1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.FhtW24dHGL51KZpHPase5uGoO6BAjaz53Opk_H0dMVEuU9GffNb2FkS8_Kp2wgpgjZy9tlLFEmFjBvDOsOpDcdXBykh6x-qjwrkzmxKDIZyjQm7EpzEqpu081RxmlzlXl9EzuwbQOuTCprTL_OuYdLScHp9NqSJMMR2fvpAPQt8
   response:
     status:
       code: 200
       message: OK
     headers:
       Content-Length:
-      - '358'
+      - '384'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:55 GMT
+      - Wed, 09 Apr 2014 22:21:07 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 82b98f56-c896-48a3-8ed1-6a5f738ec78e
+      - 538dff617b5f1a71ca05c597d5b78b75::38f8c903-a203-45ed-8cef-f585ea6eb081
     body:
       encoding: UTF-8
-      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"3fd58ccd-8631-48aa-bdee-91f58ab94a22","created_at":"2014-03-05T16:30:55+00:00","updated_at":null,"url":"/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
+      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"0cd0ec48-c877-4e03-abcd-f0cc080f6891","created_at":"2014-04-09T22:21:05+00:00","updated_at":null,"url":"/v2/service_brokers/0cd0ec48-c877-4e03-abcd-f0cc080f6891"},"entity":{"name":"elasticsearch","broker_url":"http://registrar-broker-1.10.244.0.34.xip.io","auth_username":"admin"}}]}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:07 GMT
 - request:
     method: put
-    uri: http://api.10.244.0.34.xip.io/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers/0cd0ec48-c877-4e03-abcd-f0cc080f6891
     body:
       encoding: UTF-8
-      string: '{"broker_url":"http://10.244.3.58","auth_username":"admin","auth_password":"admin"}'
+      string: '{"broker_url":"http://registrar-broker-1.10.244.0.34.xip.io","auth_username":"admin","auth_password":"password"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -273,9 +231,9 @@ http_interactions:
       User-Agent:
       - Ruby
       Content-Length:
-      - 83
+      - 112
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJlY2RkODg3OC0xZWNmLTQzMjMtOTExZC0yYmY2YWNmMmM4MDgiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA2NSwiZXhwIjoxMzk3MDgyNjY1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.FhtW24dHGL51KZpHPase5uGoO6BAjaz53Opk_H0dMVEuU9GffNb2FkS8_Kp2wgpgjZy9tlLFEmFjBvDOsOpDcdXBykh6x-qjwrkzmxKDIZyjQm7EpzEqpu081RxmlzlXl9EzuwbQOuTCprTL_OuYdLScHp9NqSJMMR2fvpAPQt8
       Content-Type:
       - application/json
   response:
@@ -284,35 +242,35 @@ http_interactions:
       message: OK
     headers:
       Content-Length:
-      - '356'
+      - '382'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:56 GMT
+      - Wed, 09 Apr 2014 22:21:08 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 721bb205-6838-4486-9fc3-11912e5ae70b
+      - f34aa0b78b665e9e72a7b0959f71ead1::8f06c3d7-57b9-4a28-a446-08970e0f7919
     body:
       encoding: UTF-8
       string: |-
         {
           "metadata": {
-            "guid": "3fd58ccd-8631-48aa-bdee-91f58ab94a22",
-            "created_at": "2014-03-05T16:30:55+00:00",
-            "updated_at": "2014-03-05T16:30:56+00:00",
-            "url": "/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"
+            "guid": "0cd0ec48-c877-4e03-abcd-f0cc080f6891",
+            "created_at": "2014-04-09T22:21:05+00:00",
+            "updated_at": "2014-04-09T22:21:08+00:00",
+            "url": "/v2/service_brokers/0cd0ec48-c877-4e03-abcd-f0cc080f6891"
           },
           "entity": {
             "name": "elasticsearch",
-            "broker_url": "http://10.244.3.58",
+            "broker_url": "http://registrar-broker-1.10.244.0.34.xip.io",
             "auth_username": "admin"
           }
         }
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:08 GMT
 - request:
     method: get
     uri: http://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
@@ -329,29 +287,29 @@ http_interactions:
       Content-Length:
       - 0
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJlY2RkODg3OC0xZWNmLTQzMjMtOTExZC0yYmY2YWNmMmM4MDgiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA2NSwiZXhwIjoxMzk3MDgyNjY1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.FhtW24dHGL51KZpHPase5uGoO6BAjaz53Opk_H0dMVEuU9GffNb2FkS8_Kp2wgpgjZy9tlLFEmFjBvDOsOpDcdXBykh6x-qjwrkzmxKDIZyjQm7EpzEqpu081RxmlzlXl9EzuwbQOuTCprTL_OuYdLScHp9NqSJMMR2fvpAPQt8
   response:
     status:
       code: 200
       message: OK
     headers:
       Content-Length:
-      - '381'
+      - '407'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:56 GMT
+      - Wed, 09 Apr 2014 22:21:08 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - d0dcb849-f94b-40c8-b781-20c104facacf
+      - 28d94d9535e6f871612ab9d88179414d::20ee7825-c078-4afe-b5f8-cfcc96630019
     body:
       encoding: UTF-8
-      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"3fd58ccd-8631-48aa-bdee-91f58ab94a22","created_at":"2014-03-05T16:30:55+00:00","updated_at":"2014-03-05T16:30:56+00:00","url":"/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
+      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"0cd0ec48-c877-4e03-abcd-f0cc080f6891","created_at":"2014-04-09T22:21:05+00:00","updated_at":"2014-04-09T22:21:08+00:00","url":"/v2/service_brokers/0cd0ec48-c877-4e03-abcd-f0cc080f6891"},"entity":{"name":"elasticsearch","broker_url":"http://registrar-broker-1.10.244.0.34.xip.io","auth_username":"admin"}}]}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:08 GMT
 - request:
     method: get
     uri: http://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
@@ -368,32 +326,32 @@ http_interactions:
       Content-Length:
       - 0
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJlY2RkODg3OC0xZWNmLTQzMjMtOTExZC0yYmY2YWNmMmM4MDgiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA2NSwiZXhwIjoxMzk3MDgyNjY1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.FhtW24dHGL51KZpHPase5uGoO6BAjaz53Opk_H0dMVEuU9GffNb2FkS8_Kp2wgpgjZy9tlLFEmFjBvDOsOpDcdXBykh6x-qjwrkzmxKDIZyjQm7EpzEqpu081RxmlzlXl9EzuwbQOuTCprTL_OuYdLScHp9NqSJMMR2fvpAPQt8
   response:
     status:
       code: 200
       message: OK
     headers:
       Content-Length:
-      - '381'
+      - '407'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:56 GMT
+      - Wed, 09 Apr 2014 22:21:08 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 60b875be-64da-4f30-9d50-178e8e2a0dcc
+      - 5ed386e1ba419d959b276add30ccf8b0::8009c19e-dc85-4d25-876b-82929d6e0c55
     body:
       encoding: UTF-8
-      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"3fd58ccd-8631-48aa-bdee-91f58ab94a22","created_at":"2014-03-05T16:30:55+00:00","updated_at":"2014-03-05T16:30:56+00:00","url":"/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22"},"entity":{"name":"elasticsearch","broker_url":"http://10.244.3.58","auth_username":"admin"}}]}'
+      string: '{"total_results":1,"total_pages":1,"prev_url":null,"next_url":null,"resources":[{"metadata":{"guid":"0cd0ec48-c877-4e03-abcd-f0cc080f6891","created_at":"2014-04-09T22:21:05+00:00","updated_at":"2014-04-09T22:21:08+00:00","url":"/v2/service_brokers/0cd0ec48-c877-4e03-abcd-f0cc080f6891"},"entity":{"name":"elasticsearch","broker_url":"http://registrar-broker-1.10.244.0.34.xip.io","auth_username":"admin"}}]}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:08 GMT
 - request:
     method: delete
-    uri: http://api.10.244.0.34.xip.io/v2/service_brokers/3fd58ccd-8631-48aa-bdee-91f58ab94a22
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers/0cd0ec48-c877-4e03-abcd-f0cc080f6891
     body:
       encoding: US-ASCII
       string: ''
@@ -407,25 +365,23 @@ http_interactions:
       Content-Length:
       - 0
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJiMzhhMGEyYi0zZmQwLTQ0MmItYjQ1Ny1lYjUwNjAzYWQzYjciLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NSwiZXhwIjoxMzk0MDM3NjU1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.ZkLCqmEZU-a4ESLcT77Ult21ebT0gIfV8YU1u7H6DKLBcxFAMKqIafoJExqvkZIHkQPJVBbtyHPDeqFig1VcJanerMN1IFfH4a-0rKn_Rw7eFMB27I9WdryuYVrhk5oQziFrGnJWsAy7Oe8CHgUyWHtGrMlddlgokNrchOZDNns
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJlY2RkODg3OC0xZWNmLTQzMjMtOTExZC0yYmY2YWNmMmM4MDgiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA2NSwiZXhwIjoxMzk3MDgyNjY1LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.FhtW24dHGL51KZpHPase5uGoO6BAjaz53Opk_H0dMVEuU9GffNb2FkS8_Kp2wgpgjZy9tlLFEmFjBvDOsOpDcdXBykh6x-qjwrkzmxKDIZyjQm7EpzEqpu081RxmlzlXl9EzuwbQOuTCprTL_OuYdLScHp9NqSJMMR2fvpAPQt8
   response:
     status:
       code: 204
       message: No Content
     headers:
       Date:
-      - Wed, 05 Mar 2014 16:30:56 GMT
+      - Wed, 09 Apr 2014 22:21:08 GMT
       Server:
       - nginx
-      Transfer-Encoding:
-      - chunked
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 99e3e73e-a005-4c8d-9bd9-382538d2da3e
+      - 8979f1a5c4b86f55eca0044575db45c0::e4d9a6d4-ee8c-46d0-862e-5238c8226b51
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:08 GMT
 recorded_with: VCR 2.8.0

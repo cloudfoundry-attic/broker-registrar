@@ -5,14 +5,28 @@ include BlueShell::Matchers
 
 describe 'Broker Registrar command line bin' do
   before(:all) do
-    @config = YAML.load_file('spec/config.yml')
+    @config = YAML.load_file('spec/config_defaults.yml')
   end
 
   context 'does not receive all the parameters' do
     it 'returns a validation error' do
       BlueShell::Runner.run 'bin/broker-registrar register' do |runner|
         runner.with_timeout(1) do
-          runner.should have_output 'Usage: broker-registrar register --cf-address <URL> --cf-username <CF username> --cf-password <CF password> --broker-name <broker name> --broker-url <broker URL> --broker-username <broker username> --broker-password <broker password>'
+          runner.should have_output   <<-USAGE
+Usage: broker-registrar register|delete OPTS
+
+Required options:
+--cf-address <URL>
+--cf-username <CF username>
+--cf-password <CF password>
+--broker-name <broker name>
+
+Required for options for register only:
+--broker-url <broker URL>
+--broker-username <broker username>
+--broker-password <broker password>
+
+USAGE
           runner.should have_output 'missing argument: cf-address'
           runner.should have_exit_code(1)
         end
@@ -28,6 +42,7 @@ describe 'Broker Registrar command line bin' do
     let(:broker_url) { @config['broker']['url'] }
     let(:broker_username) { @config['broker']['username'] }
     let(:broker_password) { @config['broker']['password'] }
+    let(:new_broker_url) { broker_url.gsub('registrar-broker-1', 'registrar-broker-2') }
     let(:client) { create_client }
     let(:test_organization) { create_organization(client) }
     let(:test_space) { create_space(client, test_organization) }
@@ -75,13 +90,13 @@ describe 'Broker Registrar command line bin' do
 
     it 'can be run twice successfully' do
       BlueShell::Runner.run command do |runner|
-        runner.with_timeout(1) do
-          runner.should have_exit_code(0)
+        runner.with_timeout(30) do
+          expect(runner).to have_exit_code(0)
         end
       end
 
       BlueShell::Runner.run command do |runner|
-        runner.with_timeout(1) do
+        runner.with_timeout(30) do
           runner.should have_exit_code(0)
         end
       end
@@ -117,7 +132,6 @@ describe 'Broker Registrar command line bin' do
           "--broker-username \"#{broker_username}\" " +
           "--broker-password \"#{broker_password}\""
       end
-      let(:new_broker_url) { 'http://10.244.3.62' }
 
       it 'sets the broker details as requested' do
         `#{new_command}`

@@ -1,7 +1,7 @@
 broker:
-  url: http://10.244.3.58
+  url: http://registrar-broker-1.10.244.0.34.xip.io
   username: admin
-  password: admin
+  password: password
 cloud_foundry:
   url: http://api.10.244.0.34.xip.io
   username: admin
