@@ -14,8 +14,6 @@ Required options:
 --cf-username <CF username>
 --cf-password <CF password>
 --broker-name <broker name>
-
-Required for options for register only:
 --broker-url <broker URL>
 --broker-username <broker username>
 --broker-password <broker password>
@@ -66,10 +64,16 @@ end
 
 begin
   logger = Logger.new(STDOUT)
-  BrokerRegistrar.new(logger).register(parse_arguments)
+  if ARGV.first == 'register'
+    BrokerRegistrar.new(logger).register(parse_arguments)
+  elsif ARGV.first == 'delete'
+    BrokerRegistrar.new(logger).delete(parse_arguments)
+  else
+    raise 'Unknown command'
+  end
 
 rescue => e
-  puts usage
+  puts usage if e.is_a? OptionParser::MissingArgument || e.message == 'Unknown command'
 
   error_logger = Logger.new(STDERR)
   error_logger.error(e)
