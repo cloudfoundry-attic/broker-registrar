@@ -20,6 +20,23 @@ class BrokerRegistrar
     broker_manager.make_services_plans_public(services)
   end
 
+  def delete(args)
+    client = CFoundry::V2::Client.new(args[:cf_address])
+    client.login(username: args[:cf_username], password: args[:cf_password])
+
+    broker_manager = BrokerManager.new(client, logger)
+    services = broker_manager.get_services_for_broker(args[:broker_url], args[:broker_username], args[:broker_password])
+
+    services.each { |service| service.delete!(purge: true) }
+    broker = client.service_broker_by_name(args[:broker_name])
+    if broker
+      broker.delete!
+    else
+      puts "Service Broker #{args[:broker_name]} does not exist."
+    end
+
+  end
+
   private
 
   attr_reader :logger

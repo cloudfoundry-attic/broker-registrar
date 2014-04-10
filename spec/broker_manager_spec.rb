@@ -4,7 +4,7 @@ require_relative '../lib/broker_manager'
 
 describe BrokerManager, :vcr do
   before(:all) do
-    @config = YAML.load_file('spec/config.yml')
+    @config = YAML.load_file('spec/config_defaults.yml')
   end
 
   before(:each) do
@@ -21,10 +21,11 @@ describe BrokerManager, :vcr do
 
   let(:broker_name) { 'elasticsearch' }
   let(:broker_url) { @config['broker']['url'] }
+  let(:new_url) { broker_url.gsub('registrar-broker-1', 'registrar-broker-2') }
   let(:broker_username) { @config['broker']['username'] }
   let(:broker_password) { @config['broker']['password'] }
 
-  subject { described_class.new(client, double('logger').as_null_object) }
+  subject { BrokerManager.new(client, double('logger').as_null_object) }
 
   describe '#find_or_create_service_broker!' do
     context 'the requested service broker does not exist' do
@@ -66,21 +67,24 @@ describe BrokerManager, :vcr do
     end
 
     context 'the requested service broker exists but with different details' do
+      let(:broker) { client.service_broker }
       before do
-        requested_broker = double('requested_broker').as_null_object
-        expect(requested_broker).to receive(:create!).and_raise(CFoundry::APIError.new(nil, 270_003))
-        expect(client).to receive(:service_broker).and_return(requested_broker)
+        broker.name = broker_name
+        broker.broker_url = broker_url
+        broker.auth_username = broker_username
+        broker.auth_password = broker_password
+        broker.create!
+      end
+
+      after do
+        client.service_broker_by_name(broker_name).delete!
       end
 
       it 'updates the url, username and password' do
-        returned_broker = double('returned_broker')
-        expect(client).to receive(:service_broker_by_name).and_return(returned_broker)
-        expect(returned_broker).to receive(:broker_url=).with("new_url")
-        expect(returned_broker).to receive(:auth_username=).with("new_username")
-        expect(returned_broker).to receive(:auth_password=).with("new_password")
-        expect(returned_broker).to receive(:update!)
-
-        subject.find_or_create_service_broker!(broker_name, "new_url", "new_username", "new_password")
+        subject.find_or_create_service_broker!(broker_name, new_url, "admin2", "password2")
+        updated_broker = client.service_broker_by_name(broker_name)
+        expect(updated_broker.broker_url).to eq new_url
+        expect(updated_broker.auth_username).to eq "admin2"
       end
     end
 
