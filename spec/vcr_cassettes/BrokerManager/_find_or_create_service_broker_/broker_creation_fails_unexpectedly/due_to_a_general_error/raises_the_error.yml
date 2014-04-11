@@ -25,19 +25,19 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:56 GMT
+      - Wed, 09 Apr 2014 22:21:11 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - eed23ecd-fb23-4073-9c96-0fbf1fc3b44b
+      - 62345ccbe2af8fc72df3120ef42a6883::fc28fa0e-36e9-4915-babd-95e1d2d15f00
     body:
       encoding: UTF-8
       string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
         Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:11 GMT
 - request:
     method: get
     uri: http://api.10.244.0.34.xip.io/info
@@ -63,19 +63,19 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:56 GMT
+      - Wed, 09 Apr 2014 22:21:11 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - f4e3cf9e-be5a-482e-b848-67a4572976c7
+      - fc0daee345d9a4f088b24f3f694eed03::31b3fd5b-bc78-43cc-9e7d-9b354b106e43
     body:
       encoding: UTF-8
       string: '{"name":"vcap","build":"2222","support":"http://support.cloudfoundry.com","version":2,"description":"Cloud
         Foundry sponsored by Pivotal","authorization_endpoint":"http://login.10.244.0.34.xip.io","token_endpoint":"https://uaa.10.244.0.34.xip.io","allow_debug":true}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:11 GMT
 - request:
     method: post
     uri: http://cf:@login.10.244.0.34.xip.io/oauth/token
@@ -105,9 +105,9 @@ http_interactions:
       Content-Length:
       - '1965'
       Content-Type:
-      - application/json;charset=UTF-8
+      - application/json;charset=utf-8
       Date:
-      - Wed, 05 Mar 2014 16:30:55 GMT
+      - Wed, 09 Apr 2014 22:21:11 GMT
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Pragma:
@@ -117,9 +117,48 @@ http_interactions:
       - Apache-Coyote/1.1
     body:
       encoding: UTF-8
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJjMmEwMTY5Zi1lZDY5LTQzMWQtYWQyOC1hYTMyZDNjODY3MWUiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzYjQ0N2M1LTk4NDEtNGEwMS1hNDFjLWVhZjY4NDI2OWU1NyIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NDAzNzA1NiwiZXhwIjoxMzk0MDM3NjU2LCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.hEEUNvcuLCdNmeEGiQU75hrNM1hsnQy7xb63EWOBMF03L38A2wFtenoKWH77GlNcwlZ1YDE65QsKMl1S-7jRgNzaFVTrO4V6xRjLpGqdImHXobDHtewzGJLIGtBKKJnEcl_vWCssbKHnW81l2iHXSbqv40A6q_IVqe5CmzmvK0A","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI4NWY2NzQ2MC1jNTE5LTQ0MzEtYmJjZi0yNTM3MGIyYTFiMzAiLCJzdWIiOiIzM2I0NDdjNS05ODQxLTRhMDEtYTQxYy1lYWY2ODQyNjllNTciLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjEzOTQwMzcwNTYsImV4cCI6MTM5NjYyOTA1NiwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdfQ.B5xT5a4sSsuYpHULLKU9_zkeiaFjwvJZqDLnov8fCX3VQqo15MJ0WA04qtn6U14PHDM2aEOXzNPMl8jvmZBGCOaazZkVt3JUNpRfXSLWBudcgjye4_mimGWeme4tANPj1Yl7Qc4OHgEGhH8ULllIjD326xpO7c9OJqBa7KmuEWs","expires_in":599,"scope":"cloud_controller.admin
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJhMzNlNjdhMy1iNWU4LTQzN2ItOTVkYi02MjFlMTU4NzkzY2YiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA3MSwiZXhwIjoxMzk3MDgyNjcxLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.kOXmCeeh2eFWvyR0pPByL1UDeeHTHyKML3Q1LctOJhrHKe0oR-Kk7yWynwPK8MyrUQtznQx_YyvSUdxnQv3yKOPLrwEND45ZABWHsUEf-hl1vClLpU2nOkkIhbP-P8dGsp3Gczn8oB-5O4p7Pmbj28szUd-AuTsGw7Kz4Ks7v44","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwZWE2YjkzZi1lNjg0LTRiNGItYWZhNC00MjEzYmQwMWUxNmQiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJpYXQiOjEzOTcwODIwNzEsImV4cCI6MTM5OTY3NDA3MSwiY2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdfQ.TiQLBSqST2FtSjHGjfuL6HuGe-JGxv9ekJhb1UJtSkXruwXB4dx6kXeXoLQ6k8dnqb5mnHgXYm_KQo7rOoc4hr9HyOHXVPIUKh44LcSQ817bY1VQ-2Z9RRgR1y-emHn4ATgOm9nLbkpkLCY8oqWbC8ZoXk0vpYtN6u00k9EJ0LM","expires_in":599,"scope":"cloud_controller.admin
         cloud_controller.read cloud_controller.write openid password.write scim.read
-        scim.write","jti":"c2a0169f-ed69-431d-ad28-aa32d3c8671e"}'
+        scim.write","jti":"a33e67a3-b5e8-437b-95db-621e158793cf"}'
     http_version: 
-  recorded_at: Wed, 05 Mar 2014 16:33:30 GMT
+  recorded_at: Wed, 09 Apr 2014 22:21:11 GMT
+- request:
+    method: get
+    uri: http://api.10.244.0.34.xip.io/v2/service_brokers?inline-relations-depth=1&q=name:elasticsearch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Length:
+      - 0
+      Authorization:
+      - bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJhMzNlNjdhMy1iNWU4LTQzN2ItOTVkYi02MjFlMTU4NzkzY2YiLCJzdWIiOiIwMDQzZGI4Zi1mYzMyLTQ0OTktODMxZi01ZmQzMDljYjZjNTgiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLmFkbWluIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInBhc3N3b3JkLndyaXRlIiwic2NpbS5yZWFkIiwic2NpbS53cml0ZSJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjAwNDNkYjhmLWZjMzItNDQ5OS04MzFmLTVmZDMwOWNiNmM1OCIsInVzZXJfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbiIsImlhdCI6MTM5NzA4MjA3MSwiZXhwIjoxMzk3MDgyNjcxLCJpc3MiOiJodHRwczovL3VhYS4xMC4yNDQuMC4zNC54aXAuaW8vb2F1dGgvdG9rZW4iLCJhdWQiOlsic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.kOXmCeeh2eFWvyR0pPByL1UDeeHTHyKML3Q1LctOJhrHKe0oR-Kk7yWynwPK8MyrUQtznQx_YyvSUdxnQv3yKOPLrwEND45ZABWHsUEf-hl1vClLpU2nOkkIhbP-P8dGsp3Gczn8oB-5O4p7Pmbj28szUd-AuTsGw7Kz4Ks7v44
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '82'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 09 Apr 2014 22:21:11 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 4f7f1ccea2ed06233194503438c7ed73::4f2204ee-0238-45bd-b0c9-0d82c53dea3a
+    body:
+      encoding: UTF-8
+      string: '{"total_results":0,"total_pages":1,"prev_url":null,"next_url":null,"resources":[]}'
+    http_version: 
+  recorded_at: Wed, 09 Apr 2014 22:21:11 GMT
 recorded_with: VCR 2.8.0
