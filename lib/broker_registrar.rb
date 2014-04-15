@@ -27,14 +27,19 @@ class BrokerRegistrar
     broker_manager = BrokerManager.new(client, logger)
     services = broker_manager.get_services_for_broker(args[:broker_url], args[:broker_username], args[:broker_password])
 
-    services.each { |service| service.delete!(purge: true) }
+    services.each do |service|
+      service_name = service.label
+      service.delete!(purge: true)
+      logger.info "Purged service offering #{service_name}"
+    end
+
     broker = client.service_broker_by_name(args[:broker_name])
     if broker
       broker.delete!
+      logger.info "Deleted service broker #{args[:broker_name]}"
     else
-      puts "Service Broker #{args[:broker_name]} does not exist."
+      logger.info "Service Broker #{args[:broker_name]} does not exist."
     end
-
   end
 
   private
