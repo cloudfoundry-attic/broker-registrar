@@ -27,7 +27,7 @@ class BrokerManager
 
   def get_services_for_broker(broker_url, broker_username, broker_password)
     credentials = { username: broker_username, password: broker_password }
-    response = HTTParty.get("#{broker_url}/v2/catalog", basic_auth: credentials)
+    response = HTTParty.get("#{broker_url}/v2/catalog", basic_auth: credentials, verify: false)
     broker_provided_ids = extract_broker_provided_ids(response)
     client.services.find_all { |s| broker_provided_ids.include?(s.unique_id) }
   end
